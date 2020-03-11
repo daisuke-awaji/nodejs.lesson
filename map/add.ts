@@ -1,5 +1,7 @@
 import { IGateInfo } from "./interface";
 export function add(inoutData: IGateInfo[]) {
+  // 集計のロジックはここに集中させる
+
   return {
     yesterday: {
       in: inoutData.filter(data => {
@@ -20,23 +22,34 @@ export function add(inoutData: IGateInfo[]) {
   };
 }
 
+const InOut = {
+  IN: "1",
+  OUT: "2"
+};
+
 const isEnteredToday = (data: IGateInfo) => {
   const today = new Date("2020/11/12");
-  return data.gateDate.getDate() === today.getDate() && data.inOutFlag === "1";
+  return (
+    data.gateDate.getDate() === today.getDate() && data.inOutFlag === InOut.IN
+  );
 };
 const isExitToday = (data: IGateInfo) => {
   const today = new Date("2020/11/12");
-  return data.gateDate.getDate() === today.getDate() && data.inOutFlag === "2";
+  return (
+    data.gateDate.getDate() === today.getDate() && data.inOutFlag === InOut.OUT
+  );
 };
 const isEnteredYesterday = (data: IGateInfo) => {
   const today = new Date("2020/11/12");
   return (
-    data.gateDate.getDate() - 1 === today.getDate() && data.inOutFlag === "1"
+    data.gateDate.getDate() === today.getDate() - 1 &&
+    data.inOutFlag === InOut.IN
   );
 };
 const isExitYesterday = (data: IGateInfo) => {
   const today = new Date("2020/11/12");
   return (
-    data.gateDate.getDate() - 1 === today.getDate() && data.inOutFlag === "2"
+    data.gateDate.getDate() === today.getDate() - 1 &&
+    data.inOutFlag === InOut.OUT
   );
 };

@@ -6,8 +6,8 @@ export default [
     workerId: "N11",
     companyId: "COMPANY001",
     timeChange: "00:00:00",
-    gateTime: new Date("2020/11/12 10:22:30"),
-    gateDate: new Date("2020/11/12 10:22:30"),
+    gateTime: new Date("2020/11/11 10:22:30"),
+    gateDate: new Date("2020/11/11 10:22:30"),
     constructionContentsName: "A"
   },
   {

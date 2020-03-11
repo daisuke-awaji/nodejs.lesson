@@ -10,16 +10,16 @@ export interface IGateInfo {
   constructionContentsName: string;
 }
 
-export interface ISummary {
-  [firstCompanyId: string]: IFirstCompaniesSummary;
+export interface IClassified {
+  [firstCompanyId: string]: IFirstCompaniesClassified;
 }
-export interface IFirstCompaniesSummary {
-  companies: ICompanySummary;
+export interface IFirstCompaniesClassified {
+  companies: ICompanyClassified;
 }
-export interface ICompanySummary {
-  [companyId: string]: IWorkerSummary;
+export interface ICompanyClassified {
+  [companyId: string]: IWorkerClassified;
 }
-export interface IWorkerSummary {
+export interface IWorkerClassified {
   workers: IWorkerGateInfo;
 }
 export interface IWorkerGateInfo {
@@ -37,5 +37,37 @@ export interface IClassifiedCompanyWorkers {
         };
       };
     };
+  };
+}
+
+export interface ISummary {
+  detail: [
+    {
+      [firstCompanyId: string]: {
+        detail: {
+          [companyId: string]: {
+            detail: {
+              [workerId: string]: {
+                summary: ISummaryOne;
+              };
+            };
+            summary: ISummaryOne;
+          };
+        };
+        summary: ISummaryOne;
+      };
+    }
+  ];
+  summary: ISummaryOne;
+}
+
+interface ISummaryOne {
+  yesterday: {
+    in: number;
+    out: number;
+  };
+  today: {
+    in: number;
+    out: number;
   };
 }

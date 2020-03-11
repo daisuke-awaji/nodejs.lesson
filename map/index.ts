@@ -1,5 +1,5 @@
 import data from "./data";
-import { classifyCompanyWorkers } from "./classifyCompanyWorkers";
+import { classifyCompanyWorkers } from "./classify";
 import { total } from "./sum";
 
 const main = () => {

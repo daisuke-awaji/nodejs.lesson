@@ -1,0 +1,74 @@
+{
+  "companies": {
+    "0000000000": {
+      "workers": {
+        "001": [
+          {
+            "name": "bob",
+            "workerId": "001",
+            "companyId": "0000000000",
+            "date": "2010/01/21 10:12:21",
+            "type": "1"
+          },
+          {
+            "name": "bob",
+            "workerId": "001",
+            "companyId": "0000000000",
+            "date": "2010/01/21 14:12:21",
+            "type": "2"
+          }
+        ]
+      }
+    },
+    "0000000001": {
+      "workers": {
+        "002": [
+          {
+            "name": "john",
+            "workerId": "002",
+            "companyId": "0000000001",
+            "date": "2010/01/21 10:13:31",
+            "type": "1"
+          },
+          {
+            "name": "john",
+            "workerId": "002",
+            "companyId": "0000000001",
+            "date": "2010/01/21 14:15:29",
+            "type": "2"
+          },
+          {
+            "name": "john",
+            "workerId": "002",
+            "companyId": "0000000001",
+            "date": "2010/01/21 16:13:31",
+            "type": "1"
+          },
+          {
+            "name": "john",
+            "workerId": "002",
+            "companyId": "0000000001",
+            "date": "2010/01/21 19:15:29",
+            "type": "2"
+          }
+        ],
+        "003": [
+          {
+            "name": "steave",
+            "workerId": "003",
+            "companyId": "0000000001",
+            "date": "2010/01/21 12:13:31",
+            "type": "1"
+          },
+          {
+            "name": "steave",
+            "workerId": "003",
+            "companyId": "0000000001",
+            "date": "2010/01/21 18:15:29",
+            "type": "2"
+          }
+        ]
+      }
+    }
+  }
+}
